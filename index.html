@@ -6,11 +6,274 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- Imports -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    </style>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     
     <title>Thijs van den Heuvel</title>
+
+    <style>
+        /* Header Styling */
+        .header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            border-bottom: 2px solid white;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .header a:hover {
+            color: cyan;
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Responsive Header */
+        @media (max-width: 768px) {
+            .header{
+                display: none;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="main_header">This page is under development!</h1>
+
+<!-- Top section -->
+<header class="header">
+    <div class="logo" style="color: white">Thijs van den Heuvel</div>
+    <nav>
+        <div class="nav-links">
+            <a href="#welcome">Welcome</a>
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+    <div class="welcome fade-in" id="welcome"> <!-- Welcome Screen -->
+        <div class="container" style="width: 100%;">
+            <h1 class="main-header" style="text-align: center; margin-bottom: 25vh; margin-top: 200px">Welcome</h1>
+            <div class="arrow"></div>
+        </div>
+    </div>
+
+    <div style="margin-top: 25vh; color: white" class="about fade-in" id="about"> <!-- About Me -->
+        <div class="container" style="width: 100%">
+            <h1 class="about-header" style="font-size: 5vb;">About Me</h1>
+            <span class="line"></span>
+            <div class="about-content">
+                <p style="font-size: 3vb">
+                    My name is <span><b>Thijs van den Heuvel.</b></span> <br>
+                    I was born in 2006, and I'm a dedicated software developer currently studying at Curio in Roosendaal. <br>
+                    Here, I've learnt how to make basic websites such as the one you're looking at right now, as well as working in .NET C#. <br> <br>
+                    If you scroll further down, you can see some information about my experience and skills as a developer, as well as all the languages I've learnt to work with. <br>
+                </p>
+                <img src="img/selfie.jpg" alt="profile image" class="hide-mobile" style="max-width: 15%; height: auto">
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 5vh; color: white" class="experience fade-in" id="experience"> <!-- My Experience -->
+        <div class="container" style="width: 100%">
+            <h1 style="font-size: 5vb;">My Experience & Projects</h1>
+            <span class="line"></span>
+            <div class="experience-content">
+                <div class="experience-list-small">
+                    <div class="experience-item-small">
+                        <div>
+                            <img src="img/logos/github.png" alt="GitHub Logo" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2><a href="https://github.com/ThijsHeuvel" style="color: cyan">My GitHub</a></h2>
+                            <h3>Here you can find some of my work and the source code behind it. This is, alongside my LinkedIn is where you're gonna find the most things about me.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="font-size: 3vb; border-top: white 2px dashed; padding-top: 5vh">
+                    I've worked with quite a few languages and frameworks so far, here's a list of all the ones I've touched, and have some basic experience in:
+                </p>
+
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/csharp.png" alt="C# Logo" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>C#</h2>
+                            <h3>Experience: 3 years</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/dotnet.png" alt="DotNet logo" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>.NET + WINUI3/WPF</h2>
+                            <h3>Experience: ~2.5 years</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/efcore.png" alt="EF Core Logo" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Entity Framework Core</h2>
+                            <h3>Experience: 2 years</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/unity.png" alt="Unity Logo" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Unity Game Engine</h2>
+                            <h3>Experience: 6 months</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/html.png" alt="HTML" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>HTML</h2>
+                            <h3>Experience: 3 years</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/laravel.png" alt="laravel" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Laravel</h2>
+                            <h3>Experience: ~2 years</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/symfony.png" alt="Symfony" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Symfony</h2>
+                            <h3>Experience: 6 months</h3>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/python.png" alt="Python" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Python</h2>
+                            <h3>Experience: ~3 months</h3>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/git.png" alt="Git logo" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Git</h2>
+                            <h3>Experience: 3 years</h3>
+                        </div>
+                    </div>
+                    <div class="experience-item">
+                        <div>
+                            <img src="img/logos/ubuntu.png" alt="Ubuntu (Linux)" style="height: auto; max-width: 200px">
+                        </div>
+                        <div>
+                            <h2>Ubuntu (Linux)</h2>
+                            <h3>Experience: 6 months</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 25vh; margin-bottom: 10vh; color: white" class="contact fade-in" id="contact"> <!-- Contact -->
+        <div class="container" style="width: 100%">
+            <h1 class="about-header" style="font-size: 5vb;">Contact Me</h1>
+            <span class="line"></span>
+            <div class="contact-content-email" style="margin-top: 2vh">
+                <p style="font-size: 3vb">
+                    E-Mail: <span><b><a href="mailto:thijsvandenheuvel2006@gmail.com">thijsvandenheuvel2006@gmail.com</a></b></span>.<br>
+                </p>
+            </div>
+            <h1 style="margin-bottom: 5vh">OR</h1>
+            <div class="contact-content">
+                <p style="font-size: 3vb">
+                    You can also find me on <span><b><a href="https://www.linkedin.com/in/thijs-van-den-heuvel-746a37276/">LinkedIn</a></b></span>.<br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<footer style="background-color: transparent">
+    <p style="font-size: 3vb; text-align: center; background-color: transparent">This website was made by Thijs van den Heuvel. You can view the source code to this page on my GitHub.</p>
+</footer>
+
+
+
+<script>
+    // Function to handle the fade-in effect on scroll
+    function handleScrollAnimations() {
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        fadeElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            // Check if the element is visible in the viewport
+            if (rect.top <= windowHeight - 100) {
+                element.classList.add('visible');
+            }
+        });
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScrollAnimations);
+
+    // Trigger animations on page load
+    document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+</script>
+
 </body>
 </html>
