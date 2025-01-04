@@ -113,27 +113,6 @@ body {
 
 
 
-/*@media (max-width: 768px) {*/
-/*    .experience-list {*/
-/*        grid-template-columns: 1fr; !* 1 column on very small screens (phones) *!*/
-/*    }*/
-/*    .experience-item{*/
-/*        margin-left: -35px;*/
-/*        width: 100%;*/
-/*    }*/
-/*    .experience-content {*/
-/*        width: 90%;*/
-/*    }*/
-
-/*    .experience-item-small{*/
-/*        margin-left: 0px;*/
-/*        width: 100%;*/
-/*    }*/
-/*    .experience-content-small {*/
-/*        width: 90%;*/
-/*    }*/
-/*}*/
-
 @media (max-width: 1300px) {
     body {
         font-size: 4vw; /* Reduce the base font size */
@@ -226,6 +205,10 @@ body {
         font-size: 6vw;
         margin-bottom: 15vh;
     }
+    .hide-mobile {
+        display: none;
+    }
+
 
     .about,
     .experience {
